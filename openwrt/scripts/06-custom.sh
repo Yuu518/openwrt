@@ -10,3 +10,7 @@ git clone https://$github/sbwml/openwrt-alist package/new/alist
 # lrzsz - add patched package
 rm -rf feeds/packages/utils/lrzsz
 git clone https://$github/sbwml/packages_utils_lrzsz package/new/lrzsz
+
+# timedreboot
+rm -rf package/new/extd/luci-app-timedreboot
+git clone https://$github/pmkol/luci-app-timedreboot package/new/extd/luci-app-timedreboot
