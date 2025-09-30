@@ -146,10 +146,10 @@ CONFIG_ZLIB_OPTIMIZE_SPEED=y
 ### APPS
 # CONFIG_PACKAGE_luci-app-cpufreq is not set
 # CONFIG_PACKAGE_luci-app-ddns-go is not set
-# CONFIG_PACKAGE_luci-app-diskman is not set
+# CONFIG_PACKAGE_luci-app-diskman= is not set
 # CONFIG_PACKAGE_luci-app-eqosplus is not set
 # CONFIG_PACKAGE_luci-app-hd-idle is not set
-# CONFIG_PACKAGE_luci-app-homeproxy is not set
+# CONFIG_PACKAGE_luci-app-momo is not set
 # CONFIG_PACKAGE_luci-app-nikki is not set
 # CONFIG_PACKAGE_luci-app-ramfree is not set
 # CONFIG_PACKAGE_luci-app-samba4 is not set

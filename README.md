@@ -139,7 +139,7 @@ Ext4：固件文件名带有 “ext4”，Ext4 文件系统具备整个分区可
   # 1、下载最新 Releases 固件并通过 SD 卡启动
   # 2、使用 FileZilla 等工具上传一份固件到 /tmp 目录，或通过终端 wget 在线下载固件到 /tmp 目录
   # 3、使用内建命令写入固件到 eMMC 存储（请根据实际文件名称与路径）
-  emmc-install /tmp/openwrt-23.05.5-rockchip-armv8-friendlyarm_nanopi-r5s-ext4-sysupgrade.img.gz
+  emmc-install /tmp/openwrt-23.05.6-rockchip-armv8-friendlyarm_nanopi-r5s-ext4-sysupgrade.img.gz
   ```
 
 ---------------

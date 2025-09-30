@@ -65,7 +65,7 @@ fi
 
 # source branch
 get_branch_version=$(curl -s "https://api.github.com/repos/pmkol/openwrt-source/branches" | jq -r '.[].name | select(startswith("v"))' | sort -V | tail -n 1)
-get_branch_timestamp=$(curl -s "https://api.github.com/repos/pmkol/openwrt-source/commits?sha=$get_branch_version" | jq -r '.[0].commit.committer.date' | xargs -I {} date -d "{}" +%s)
+get_branch_timestamp=$(curl -s "https://api.github.com/repos/openwrt/openwrt/commits?sha=$get_branch_version" | jq -r '.[0].commit.committer.date' | xargs -I {} date -d "{}" +%s)
 
 export toolchain_version=openwrt-23.05
 
@@ -153,7 +153,6 @@ git clone https://$github/openwrt/openwrt master/openwrt --depth=1
 git clone https://$github/openwrt/packages master/packages --depth=1
 git clone https://$github/openwrt/luci master/luci --depth=1
 git clone https://$github/openwrt/routing master/routing --depth=1
-[ "$ARCHIVE_BUILD" = "y" ] && git clone https://$github/pmkol/openwrt-feeds -b archive-23.05 master/archive-23.05 --depth=1
 
 # openwrt toolchain
 git clone https://$github/pmkol/openwrt-llvm-toolchain master/toolchain -b gcc14 --depth=1
@@ -162,6 +161,7 @@ git clone https://$github/pmkol/openwrt-llvm-toolchain master/toolchain -b gcc14
 git clone https://$github/pmkol/openwrt-feeds master/base-23.05 -b base-23.05 --depth=1
 git clone https://$github/pmkol/openwrt-feeds master/extd-23.05 -b extd-23.05 --depth=1
 git clone https://$github/pmkol/openwrt-feeds master/lite-23.05 -b lite-23.05 --depth=1
+git clone https://$github/pmkol/openwrt-feeds master/archive-23.05 -b archive-23.05 --depth=1
 [ "$(whoami)" = "runner" ] && endgroup
 
 # openwrt lite

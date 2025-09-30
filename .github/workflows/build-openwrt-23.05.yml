@@ -158,7 +158,7 @@ jobs:
 
     - name: Create release
       continue-on-error: true
-      uses: pmkol/release-action@main
+      uses: ncipollo/release-action@v1.20.0
       with:
         name: OpenWrt-23.05
         allowUpdates: true

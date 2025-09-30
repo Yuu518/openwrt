@@ -20,8 +20,6 @@ if [ "$USE_GCC14" = y ]; then
     # wsdd2
     mkdir -p feeds/packages/net/wsdd2/patches
     curl -s https://$mirror/openwrt/patch/openwrt-6.x/gcc-14/wsdd2/100-wsdd2-cast-from-pointer-to-integer-of-different-size.patch > feeds/packages/net/wsdd2/patches/100-wsdd2-cast-from-pointer-to-integer-of-different-size.patch
-    # mbedtls
-    curl -s https://$mirror/openwrt/patch/openwrt-6.x/gcc-14/mbedtls/900-tests-fix-calloc-argument-list-gcc-14-fix.patch > package/libs/mbedtls/patches/900-tests-fix-calloc-argument-list-gcc-14-fix.patch
     # perl
     curl -s https://$mirror/openwrt/patch/openwrt-6.x/gcc-14/perl/1000-fix-implicit-declaration-error.patch > feeds/packages/lang/perl/patches/1000-fix-implicit-declaration-error.patch
 fi
